@@ -1,6 +1,9 @@
-package com.exemplo.cadastro;
+package com.exemplo.cadastro.Usuarios;
 
+import com.exemplo.cadastro.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name="tb_cadastro")
@@ -12,6 +15,11 @@ public class UsuarioModel {
     private String nome;
     private String email;
     private int idade;
+
+    @ManyToOne// Um usuário tem uma única missão
+    @JoinColumn(name = "missoes_id") // Chave estrangeira
+    private MissoesModel missoes;
+
 
     public UsuarioModel() {
     }

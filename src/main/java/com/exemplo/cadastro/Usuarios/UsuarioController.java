@@ -1,4 +1,4 @@
-package com.exemplo.cadastro;
+package com.exemplo.cadastro.Usuarios;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
