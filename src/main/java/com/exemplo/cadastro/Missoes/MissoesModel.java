@@ -2,11 +2,17 @@ package com.exemplo.cadastro.Missoes;
 
 import com.exemplo.cadastro.Usuarios.UsuarioModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name= "tb_missoes")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class MissoesModel {
 
     @Id
@@ -19,7 +25,4 @@ public class MissoesModel {
 @OneToMany(mappedBy = "missoes") // Uma missão pode ter vários usuários.
     private List<UsuarioModel> usuario;
 
-
-    public MissoesModel() {
-    }
 }
